@@ -1,5 +1,5 @@
 /*-----------------------------------
--------------- Page Style -----------
+-------------- Page Styles -----------
 ------------------------------------*/
 
 * {
@@ -33,7 +33,6 @@ h1 {
 }
 
 img:hover {
-    /* filter:drop-shadow(100%); */
     transform: scale(1.1);
 }
 
@@ -51,16 +50,9 @@ img:hover {
     margin: 50px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    /* grid-template-rows: repeat(3, 1fx); */
     grid-gap: 10px;
   
     border: 1px solid #fff;
     border-radius: 10px;
    
 }
-
-/* .gallery a {
-    display: inline-block;
-    overflow: hidden;
-    box-shadow: 0 0 4px -1px #fff;
-} */
