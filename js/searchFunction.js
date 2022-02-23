@@ -1,22 +1,23 @@
 // Search Function 
 
+
 function myFunction() {
     // Declare variables
-    var input, filter, gallery, photos, a, i, txtValue;
-
-    input = document.getElementById('search');
+    var input, filter, div, div_item, ahref, i, txtValue;
+    input = document.getElementById("search");
     filter = input.value.toUpperCase();
-    gallery = document.getElementById("gallery");
-    photos = gallery.getElementsByTagName('photo');
+    div = document.getElementById("photo");
+    div_item = div.getElementsByTagName("div");
 
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < photos.length; i++) {
-        a = photos[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            photos[i].style.display = "";
-        } else {
-            photos[i].style.display = "none";
+    for (i = 0; i < div_item.length; i++) {
+        ahref = div_item[i].getElementsByTagName("a")[0];
+        if (ahref) {
+            txtValue = ahref.textContent || ahref.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                div_item[i].style.display = "";
+            } else {
+                div_item[i].style.display = "none";
+            }
+        }
     }
-  }
 }
