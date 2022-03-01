@@ -1,23 +1,22 @@
 // Search Function 
 
 
-function myFunction() {
-    // Declare variables
-    var input, filter, div, div_item, ahref, i, txtValue;
-    input = document.getElementById("search");
-    filter = input.value.toUpperCase();
-    div = document.getElementById("photo");
-    div_item = div.getElementsByTagName("div");
+// Declare variables
+var input, filter, ahref, i;
 
-    for (i = 0; i < div_item.length; i++) {
-        ahref = div_item[i].getElementsByTagName("a")[0];
-        if (ahref) {
-            txtValue = ahref.textContent || ahref.innerText;
-            if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                div_item[i].style.display = "";
-            } else {
-                div_item[i].style.display = "none";
-            }
+input = document.getElementById('search');
+filter = document.querySelectorAll('a');
+
+input.addEventListener("keyup", searchFunction);
+
+function searchFunction() {
+
+for (i = 0; i < filter.length; i++) {
+    ahref = filter[i].getAttribute("data-caption").toUpperCase();
+        if (ahref.includes(input.value.toUpperCase())) {
+            filter[i].style.display = "";
+        } else {
+            filter[i].style.display = "none";
         }
     }
 }
