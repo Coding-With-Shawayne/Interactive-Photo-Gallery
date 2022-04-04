@@ -17,6 +17,6 @@ Lightbox is a JavaScript library that displays images and videos by filling the 
 
 # Built With
 JavaScript
-LightBox plugin: baguetteBox.js [github]
+* LightBox plugin: baguetteBox.js [github]
 CSS
 HTML
