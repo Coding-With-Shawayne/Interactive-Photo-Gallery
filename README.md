@@ -15,7 +15,7 @@
 * Lightbox is a JavaScript library that displays images and videos by filling the screen, and dimming out the rest of the web page
 
 # Built With
-*JavaScript
+* JavaScript
 1. LightBox plugin: baguetteBox.js [github]
 * CSS
 * HTML
